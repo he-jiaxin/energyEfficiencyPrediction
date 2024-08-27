@@ -1,0 +1,18 @@
+# Use an official TensorFlow runtime as a parent image
+FROM tensorflow/tensorflow:latest-gpu
+
+RUN apt-key adv --fetch-keys https://developer.download.nvidia.com/compute/cuda/repos/ubuntu2004/x86_64/3bf863cc.pub
+RUN apt-get -y update
+RUN apt-get install -y python3-pip software-properties-common wget ffmpeg
+
+COPY requirements.txt /
+COPY segmentation_model /segmentation_model
+WORKDIR /app
+
+RUN pip install --upgrade pip setuptools wheel
+RUN pip install opencv-python==4.4.0.44
+RUN pip install cmake
+RUN pip install -r /requirements.txt
+
+# Command to run the segmentation model (assuming you have a script to do this)
+CMD ["python", "run_segmentation_model.py", "/input/blueprint.png", "/output/segmentation_result.png"]

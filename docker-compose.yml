@@ -1,0 +1,23 @@
+version: '3.8'
+
+services:
+  segmentation_model:
+    build:
+      context: .
+      dockerfile: Dockerfile.segmentation
+    volumes:
+      - ./input:/input
+      - ./output:/output
+    command: python run_segmentation_model.py /input/blueprint.png /output/segmentation_result.png
+
+  api:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "5000:5000"
+    volumes:
+      - .:/app
+    command: python app.py
+    depends_on:
+      - segmentation_model

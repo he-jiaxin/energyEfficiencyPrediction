@@ -1,0 +1,39 @@
+
+command for deploy
+python -m dfp.deploy --image ~/Desktop/IXN/TF2DeepFloorplan/uploads/floorplan20.png --weight log/store/G --postprocess --colorize --save output.jpg --loadmethod log
+
+python -m dfp.deploy --image ~/Desktop/IXN/TF2DeepFloorplan/uploads/floorplan21.png --weight log/store/G --postprocess --colorize --save output.jpg --loadmethod log
+
+
+
+command for extract_floor_plan_data
+python /Users/jiaxinhe/Desktop/IXN/TF2DeepFloorplan/src/dfp/extract_floor_plan_data.py /Users/jiaxinhe/Desktop/IXN/TF2DeepFloorplan/uploads/floorplan20.png /Users/jiaxinhe/Desktop/IXN/TF2DeepFloorplan/output/floorplan18data.csv /Users/jiaxinhe/Desktop/IXN/TF2DeepFloorplan/output/floorplan18calculation.csv
+Loading image from /Users/jiaxinhe/Desktop/IXN/TF2DeepFloorplan/uploads/floorplan20.png 
+
+python /Users/jiaxinhe/Desktop/IXN/TF2DeepFloorplan/src/dfp/extract_floor_plan_data.py /Users/jiaxinhe/Desktop/IXN/TF2DeepFloorplan/uploads/floorplan17.png /Users/jiaxinhe/Desktop/IXN/TF2DeepFloorplan/output/floorplan18data.csv /Users/jiaxinhe/Desktop/IXN/TF2DeepFloorplan/output/floorplan18calculation.csv
+Loading image from /Users/jiaxinhe/Desktop/IXN/TF2DeepFloorplan/uploads/floorplan17.png 
+
+python /Users/jiaxinhe/Desktop/IXN/TF2DeepFloorplan/src/dfp/extract_floor_plan_data.py /Users/jiaxinhe/Desktop/IXN/TF2DeepFloorplan/uploads/floorplan21.png /Users/jiaxinhe/Desktop/IXN/TF2DeepFloorplan/output/floorplan21data.csv /Users/jiaxinhe/Desktop/IXN/TF2DeepFloorplan/output/floorplan21calculation.csv
+Loading image from /Users/jiaxinhe/Desktop/IXN/TF2DeepFloorplan/uploads/floorplan21.png 
+
+
+command for auto pipeline (run_segmentation_model)
+python run_segmentation_model.py --image ~/Desktop/IXN/TF2DeepFloorplan/uploads/floorplan20.png --weight log/store/G --postprocess --colorize --save output.jpg --loadmethod log
+
+
+command for auto pipeline (app)
+python app.py --host 0.0.0.0 --port 5000 --segmentation_model_path /Users/jiaxinhe/Desktop/IXN/TF2DeepFloorplan/log/store/G --heat_load_model_path /Users/jiaxinhe/Desktop/IXN/TF2DeepFloorplan/EnergyEfficiencyPrediction/model_heating_corrected.joblib --output_dir /Users/jiaxinhe/Desktop/IXN/TF2DeepFloorplan/output
+
+
+command to run the heatmap 
+python heatmap.py --layout_img_path /Users/jiaxinhe/Desktop/IXN/TF2DeepFloorplan/uploads/floorplan21.png
+
+command for Notebook to python script
+
+jupyter nbconvert --to script building_energy_efficiency_prediction_modified.ipynb
+
+
+
+test script 
+pytest --cov=app --cov-report=term-missing
+pytest --verbose
