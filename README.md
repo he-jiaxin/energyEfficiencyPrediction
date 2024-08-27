@@ -1,5 +1,5 @@
 
-# TF2DeepFloorplan
+# ThermalLogic
 
 This repository contains a basic procedure to train and deploy the DNN model, leveraging the architecture proposed in the paper [**'Deep Floor Plan Recognition using a Multi-task Network with Room-boundary-Guided Attention'**](https://arxiv.org/abs/1908.11025). The original implementation by [zlzeng/DeepFloorplan](https://github.com/zlzeng/DeepFloorplan) has been adapted to work with newer versions of Tensorflow and Python, with some enhancements to streamline the training and deployment process.
 
