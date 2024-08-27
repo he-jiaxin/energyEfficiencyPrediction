@@ -5,7 +5,7 @@ This repository contains a basic procedure to train and deploy the DNN model, le
 
 The focus of my project, **ThermalLogic**, is to evaluate and build upon this model for specific floorplan recognition tasks, while also contributing to the overall improvements in training efficiency and deployment processes. Below, I document the steps and requirements needed to replicate and expand upon the results presented in my work.
 
-<img src="resources/dfpmodel.png" width="50%"><img src="resources/features.png" width="50%">
+<img src="resources/appUI.png" width="50%"><img src="resources/appResult.png" width="50%">
 
 ## Abstract
 
