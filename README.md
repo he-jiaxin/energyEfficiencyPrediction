@@ -9,7 +9,8 @@ Central to **ThermalLogic** are two models: a deep learning model for image segm
 
 By evaluating architectural features like compactness, orientation, and glazing, the AI tool predicts energy efficiency, providing insights through metrics like MAE and R-squared, and visualizing results with heatmaps and coolmaps. These tools highlight areas for design improvement, guiding early-stage architectural decisions towards greater sustainability. **ThermalLogic** not only advances AI applications in sustainable architecture but also fosters collaboration between academia and industry, laying the groundwork for future innovations in this field.
 
-<img src="resources/appUI.png" width="50%" style="margin-right: 50px;"><img src="resources/appResult.png" width="50%">
+<img src="resources/appUI.png" width="50%">
+<img src="resources/appResult.png" width="50%">
 
 ## Requirements
 
