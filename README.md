@@ -47,3 +47,21 @@ pip install --upgrade pip setuptools wheel
 conda create -n venv python=3.8 cudatoolkit=10.1 cudnn=7.6.5
 conda activate venv
 \`\`\`
+
+#### Download pretrained model (room segmentation)
+https://drive.google.com/file/d/1ChbUYGVnXCZWgIvJbvE8U6gbcx1XrHxV/view?usp=share_link
+
+https://drive.google.com/file/d/1ChbUYGVnXCZWgIvJbvE8U6gbcx1XrHxV/view?usp=share_link
+
+
+#### The Energy prediction models will be gained after you runned either finetune or none fintune notebook in the EnergyEfficiencyPrediction folder
+
+
+#### Install the node package within the frontend directory:
+Because the application was built on macOS, so i used `yarn install` to install the node.js, and `yarn start` after.
+
+#### Start the application after everything setup
+Make sure you start the `app.py` located in the root directory before the the frontend, as app.py is a flask backend which establish the RESTApi in order to run the app
+
+
+
