@@ -48,10 +48,10 @@ conda create -n venv python=3.8 cudatoolkit=10.1 cudnn=7.6.5
 conda activate venv
 \`\`\`
 
-#### Download pretrained model (room segmentation)
-https://drive.google.com/file/d/1ChbUYGVnXCZWgIvJbvE8U6gbcx1XrHxV/view?usp=share_link
+#### Download pretrained models for both DM model and ML model
 
-https://drive.google.com/file/d/1ChbUYGVnXCZWgIvJbvE8U6gbcx1XrHxV/view?usp=share_link
+https://drive.google.com/drive/folders/1H8X6MDptcz-C4wNRHYLFBjJyLDVraQfB?usp=sharing
+
 
 
 #### The Energy prediction models will be gained after you runned either finetune or none fintune notebook in the EnergyEfficiencyPrediction folder
